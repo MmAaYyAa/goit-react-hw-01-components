@@ -1,5 +1,15 @@
 import React from 'react';
-
+import {
+  Wrapper,
+  Description,
+  Image,
+  UserName,
+  LocationTag,
+  Stats,
+  StatsItem,
+  Label,
+  Quantity,
+} from './Profile.styled';
 const Profile = ({
   username,
   tag,
@@ -8,28 +18,28 @@ const Profile = ({
   stats: { followers, views, likes },
 }) => {
   return (
-    <div className="profile">
-      <div className="description">
-        <img src={avatar} alt="User avatar" className="avatar" />
-        <p className="name">{username}</p>
-        <p className="tag">@{tag}</p>
-        <p className="location">{location}</p>
-      </div>
-      <ul className="stats">
-        <li>
-          <span className="label">Followers: </span>
-          <span className="quantity">{followers}</span>
-        </li>
-        <li>
-          <span className="label">Views: </span>
-          <span className="quantity">{views}</span>
-        </li>
-        <li>
-          <span className="label">Likes: </span>
-          <span className="quantity">{likes}</span>
-        </li>
-      </ul>
-    </div>
+    <Wrapper className="profile">
+      <Description className="description">
+        <Image src={avatar} alt="User avatar" className="avatar" />
+        <UserName className="name">{username}</UserName>
+        <LocationTag className="tag">@{tag}</LocationTag>
+        <LocationTag className="location">{location}</LocationTag>
+      </Description>
+      <Stats className="stats">
+        <StatsItem>
+          <Label className="label">Followers </Label>
+          <Quantity className="quantity">{followers}</Quantity>
+        </StatsItem>
+        <StatsItem>
+          <Label className="label">Views </Label>
+          <Quantity className="quantity">{views}</Quantity>
+        </StatsItem>
+        <StatsItem>
+          <Label className="label">Likes </Label>
+          <Quantity className="quantity">{likes}</Quantity>
+        </StatsItem>
+      </Stats>
+    </Wrapper>
   );
 };
 
