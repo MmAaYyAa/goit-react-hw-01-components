@@ -5,9 +5,10 @@ export const Wrapper = styled('div')(() => {
     width: '500px',
     border: '1px solid #f6f5f5',
     borderRadius: '15px',
-    margin: '40px auto',
+    margin: '60px auto',
     backgroundColor: '#eeeeee',
-    boxShadow: '2px 3px 5px #dee1ec',
+    boxShadow: '5px 5px 10px #dee1ec',
+    overflow: 'hidden',
   };
 });
 
