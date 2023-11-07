@@ -11,12 +11,12 @@ export const FriendItem = styled('li')(() => {
   };
 });
 
-export const FriendStatus = styled('span')(({ isOnline }) => {
+export const FriendStatus = styled('span')(({ $isOnline }) => {
   return {
     display: 'block',
     width: '20px',
     height: '20px',
-    backgroundColor: isOnline === true ? 'green' : 'red',
+    backgroundColor: $isOnline === true ? 'green' : 'red',
     borderRadius: '50%',
   };
 });

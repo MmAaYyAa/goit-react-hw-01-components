@@ -6,14 +6,13 @@ const FriendList = ({ friends }) => {
   return (
     <FriendListWrapper className="friend-list">
       {friends.map(friend => (
-        <li key={friend.id}>
-          <FriendListItem
-            avatar={friend.avatar}
-            name={friend.name}
-            isOnline={friend.isOnline}
-            id={friend.id}
-          />
-        </li>
+        <FriendListItem
+          key={friend.id}
+          avatar={friend.avatar}
+          name={friend.name}
+          isOnline={friend.isOnline}
+          id={friend.id}
+        />
       ))}
     </FriendListWrapper>
   );
